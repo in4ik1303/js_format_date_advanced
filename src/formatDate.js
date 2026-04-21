@@ -19,10 +19,10 @@ function formatDate(date, fromFormat, toFormat) {
   dateParts[fromD] = dateD;
 
   if (dateParts['YY']) {
-    const year = +dateParts['YY'];
+    const year = Number(dateParts['YY']);
 
     dateParts['YYYY'] =
-      year < '30' ? '20' + dateParts['YY'] : '19' + dateParts['YY'];
+      year < 30 ? '20' + dateParts['YY'] : '19' + dateParts['YY'];
   }
 
   if (!dateParts['YY'] && dateParts['YYYY']) {
